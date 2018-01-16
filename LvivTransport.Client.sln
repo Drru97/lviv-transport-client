@@ -3,17 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27130.2020
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LvivTransport.Client.Demo", "app\LvivTransport.Client.Demo\LvivTransport.Client.Demo.csproj", "{8D99E465-EF69-4567-954E-18FDB50BD2E4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LvivTransport.Client.Demo", "app\LvivTransport.Client.Demo\LvivTransport.Client.Demo.csproj", "{8D99E465-EF69-4567-954E-18FDB50BD2E4}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LvivTransport.Client.Core", "src\LvivTransport.Client.Core\LvivTransport.Client.Core.csproj", "{D1D5D69F-D68C-4169-B39E-06E68739E59F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LvivTransport.Client.Tests", "test\LvivTransport.Client.Tests\LvivTransport.Client.Tests.csproj", "{21EA1146-7E5C-41D3-A0EE-D45E5CB3EDC8}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{92DAA015-288E-428E-B14D-E79C6C75ED31}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{C0CC939C-D418-4DB7-B689-B89189902CBA}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "app", "app", "{17FDB555-C8E2-4FC7-A793-918929E8BF83}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LvivTransport.Client.Tests", "test\LvivTransport.Client.Tests\LvivTransport.Client.Tests.csproj", "{21EA1146-7E5C-41D3-A0EE-D45E5CB3EDC8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +15,10 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8D99E465-EF69-4567-954E-18FDB50BD2E4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8D99E465-EF69-4567-954E-18FDB50BD2E4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8D99E465-EF69-4567-954E-18FDB50BD2E4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8D99E465-EF69-4567-954E-18FDB50BD2E4}.Release|Any CPU.Build.0 = Release|Any CPU
 		{D1D5D69F-D68C-4169-B39E-06E68739E59F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{D1D5D69F-D68C-4169-B39E-06E68739E59F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D1D5D69F-D68C-4169-B39E-06E68739E59F}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -29,18 +27,9 @@ Global
 		{21EA1146-7E5C-41D3-A0EE-D45E5CB3EDC8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{21EA1146-7E5C-41D3-A0EE-D45E5CB3EDC8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{21EA1146-7E5C-41D3-A0EE-D45E5CB3EDC8}.Release|Any CPU.Build.0 = Release|Any CPU
-		{8D99E465-EF69-4567-954E-18FDB50BD2E4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{8D99E465-EF69-4567-954E-18FDB50BD2E4}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{8D99E465-EF69-4567-954E-18FDB50BD2E4}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{8D99E465-EF69-4567-954E-18FDB50BD2E4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
-	EndGlobalSection
-	GlobalSection(NestedProjects) = preSolution
-		{D1D5D69F-D68C-4169-B39E-06E68739E59F} = {92DAA015-288E-428E-B14D-E79C6C75ED31}
-		{21EA1146-7E5C-41D3-A0EE-D45E5CB3EDC8} = {C0CC939C-D418-4DB7-B689-B89189902CBA}
-		{8D99E465-EF69-4567-954E-18FDB50BD2E4} = {17FDB555-C8E2-4FC7-A793-918929E8BF83}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {7D84FF5C-96B8-4B69-8939-A12E13283FC5}

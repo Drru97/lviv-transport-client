@@ -10,4 +10,8 @@
     <RepositoryType>git</RepositoryType>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\..\src\LvivTransport.Client.Core\LvivTransport.Client.Core.csproj" />
+  </ItemGroup>
+
 </Project>
