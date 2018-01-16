@@ -1,0 +1,13 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
+    <Authors>Oleh Dutsiak</Authors>
+    <Company>Franko National University of Lviv</Company>
+    <Product>LvivTransport</Product>
+    <Copyright>Copyright (c) 2017</Copyright>
+    <RepositoryType>git</RepositoryType>
+  </PropertyGroup>
+
+</Project>
