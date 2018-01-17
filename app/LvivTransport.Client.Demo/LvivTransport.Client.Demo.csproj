@@ -8,6 +8,8 @@
     <Product>LvivTransport</Product>
     <Copyright>Copyright (c) 2017</Copyright>
     <RepositoryType>git</RepositoryType>
+    <PackageProjectUrl>https://github.com/Drru97/lviv-transport-client</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/Drru97/lviv-transport-client.git</RepositoryUrl>
   </PropertyGroup>
 
   <ItemGroup>
