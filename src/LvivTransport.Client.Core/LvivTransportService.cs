@@ -51,6 +51,11 @@ namespace LvivTransport.Client.Core
                     stopsResponse.Stops = await _http.GetAsync<ICollection<Stop>>(uri);
                     return stopsResponse;
 
+                case StopsNearbyRequest _:
+                    stopsResponse = new StopsResponse();
+                    stopsResponse.Stops = await _http.GetAsync<ICollection<Stop>>(uri);
+                    return stopsResponse;
+
                 default:
                     throw new ArgumentOutOfRangeException(nameof(request), "Invalid request type");
             }
