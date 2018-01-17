@@ -1,10 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Runtime.Serialization;
 
 namespace LvivTransport.Client.Core.Models
 {
-    [DataContract, Serializable]
+    [DataContract]
     public class Route
     {
         [DataMember(Name = "external_id")]

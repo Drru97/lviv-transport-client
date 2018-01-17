@@ -1,9 +1,8 @@
-﻿using System;
-using System.Runtime.Serialization;
+﻿using System.Runtime.Serialization;
 
 namespace LvivTransport.Client.Core.Models
 {
-    [DataContract, Serializable]
+    [DataContract]
     public class Vehicle
     {
         [DataMember(Name = "route")]
