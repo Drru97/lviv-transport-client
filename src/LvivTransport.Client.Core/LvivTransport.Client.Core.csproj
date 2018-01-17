@@ -9,6 +9,8 @@
     <PackageProjectUrl>https://github.com/Drru97/lviv-transport-client</PackageProjectUrl>
     <RepositoryUrl>https://github.com/Drru97/lviv-transport-client.git</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <Version>1.0.0-alpha</Version>
   </PropertyGroup>
 
   <ItemGroup>

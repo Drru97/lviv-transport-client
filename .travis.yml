@@ -1,0 +1,11 @@
+language: csharp
+mono: none
+dotnet: 2.0.2
+solution: LvivTransport.Client.sln
+
+install:
+  - dotnet restore
+
+script:
+  - dotnet build --configuration=Release
+  - dotnet test --configuration=Release ./test/LvivTransport.Client.Tests/LvivTransport.Client.Tests.csproj
