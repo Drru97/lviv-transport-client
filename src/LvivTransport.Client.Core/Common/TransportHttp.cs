@@ -32,6 +32,7 @@ namespace LvivTransport.Client.Core.Common
                     var stop = JsonConvert.DeserializeObject<T>(json);
                     return stop;
 
+                // this is just because of API developers which didn't implement GetAllStops method
                 case GlobalConstants.Html:
                     _parser = new StopsHtmlParser();
                     var stopsJson = await _parser.ParseStops(await response.Content.ReadAsStringAsync());

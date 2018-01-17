@@ -1,8 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
+using LvivTransport.Client.Core.Abstract;
 using LvivTransport.Client.Core.Common;
 using LvivTransport.Client.Core.Models;
+using LvivTransport.Client.Core.Request;
+using LvivTransport.Client.Core.Response;
 
 namespace LvivTransport.Client.Core
 {
@@ -17,44 +20,40 @@ namespace LvivTransport.Client.Core
             _baseUri = baseUri ?? new Uri(GlobalConstants.BaseUrl, UriKind.Absolute);
         }
 
-        public RoutesResponse GetResponse(RoutesRequest request)
+        public ServiceResponse GetResponse(ServiceRequest request)
         {
             return GetResponseAsync(request).GetAwaiter().GetResult();
         }
 
-        public async Task<RoutesResponse> GetResponseAsync(RoutesRequest request)
+        public async Task<ServiceResponse> GetResponseAsync(ServiceRequest request)
         {
             var uri = new Uri(_baseUri, request.Uri);
-            var response = new RoutesResponse();
 
-            if (request.HasParameter)
+            switch (request)
             {
-                response.Routes.Add(await _http.GetAsync<Route>(uri));
-                return response;
+                case RoutesRequest routesRequest:
+                    var routesResponse = new RoutesResponse();
+                    if (routesRequest.HasParameter)
+                    {
+                        routesResponse.Routes.Add(await _http.GetAsync<Route>(uri));
+                        return routesResponse;
+                    }
+                    routesResponse.Routes = await _http.GetAsync<ICollection<Route>>(uri);
+                    return routesResponse;
+
+                case StopsRequest stopsRequest:
+                    var stopsResponse = new StopsResponse();
+                    if (stopsRequest.HasParameter)
+                    {
+                        stopsResponse.Stops.Add(await _http.GetAsync<Stop>(uri));
+                        return stopsResponse;
+                    }
+                    stopsResponse.Stops = await _http.GetAsync<ICollection<Stop>>(uri);
+                    return stopsResponse;
+
+                default:
+                    throw new ArgumentOutOfRangeException(nameof(request), "Invalid request type");
             }
-
-            response.Routes = await _http.GetAsync<ICollection<Route>>(uri);
-            return response;
-        }
-
-        public StopsResponse GetResponse(StopsRequest request)
-        {
-            return GetResponseAsync(request).GetAwaiter().GetResult();
-        }
-
-        public async Task<StopsResponse> GetResponseAsync(StopsRequest request)
-        {
-            var uri = new Uri(_baseUri, request.Uri);
-            var response = new StopsResponse();
-
-            if (request.HasParameter)
-            {
-                response.Stops.Add(await _http.GetAsync<Stop>(uri));
-                return response;
-            }
-
-            response.Stops = await _http.GetAsync<ICollection<Stop>>(uri);
-            return response;
         }
 
         public void Dispose()

@@ -1,8 +1,9 @@
 ﻿using System;
+using LvivTransport.Client.Core.Abstract;
 
-namespace LvivTransport.Client.Core
+namespace LvivTransport.Client.Core.Request
 {
-    public class RoutesRequest : BaseRequest
+    public class RoutesRequest : ServiceRequest
     {
         private readonly int? _requestParameter;
 
